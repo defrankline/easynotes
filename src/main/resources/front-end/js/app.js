@@ -19,6 +19,15 @@ myApp.config(function($stateProvider,$urlRouterProvider) {
         controller: AboutCtrl,
     };
 
+    var brandState = {
+        name: 'brands',
+        url: '/brands',
+        templateUrl: '/templates/brands.html',
+        controller: BrandCtrl,
+        resolve: BrandCtrl.resolve,
+    };
+
+    $stateProvider.state(brandState);
     $stateProvider.state(homeState);
     $stateProvider.state(aboutState);
 
