@@ -8,13 +8,15 @@ myApp.config(function($stateProvider,$urlRouterProvider) {
     var homeState = {
         name: 'home',
         url: '/home',
-        template: '<h3>Home</h3>'
+        templateUrl: '/templates/home.html',
+        controller: HomeCtrl,
     };
 
     var aboutState = {
         name: 'about',
         url: '/about',
-        template: '<h3>Its the UI-Router hello world app!</h3>'
+        templateUrl: '/templates/about.html',
+        controller: AboutCtrl,
     };
 
     $stateProvider.state(homeState);
