@@ -1,7 +1,7 @@
 package com.frank.api.model;
 
-import org.hibernate.validator.constraints.NotBlank;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -11,20 +11,28 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "notes")
+@Table(name = "products")
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(value = {"createdAt", "updatedAt"},
         allowGetters = true)
-public class Note implements Serializable {
+public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @NotBlank
-    private String title;
+    private String name;
 
     @NotBlank
-    private String content;
+    private Double price;
+
+    @NotBlank
+    @Column(name = "product_category_id")
+    private Long productCategoryId;
+
+    @NotBlank
+    @Column(name = "brand_id")
+    private Long brandId;
 
     @Column(nullable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
@@ -44,20 +52,36 @@ public class Note implements Serializable {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getContent() {
-        return content;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Long getProductCategoryId() {
+        return productCategoryId;
+    }
+
+    public void setProductCategoryId(Long productCategoryId) {
+        this.productCategoryId = productCategoryId;
+    }
+
+    public Long getBrandId() {
+        return brandId;
+    }
+
+    public void setBrandId(Long brandId) {
+        this.brandId = brandId;
     }
 
     public Date getCreatedAt() {

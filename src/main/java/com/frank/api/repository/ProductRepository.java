@@ -1,10 +1,10 @@
 package com.frank.api.repository;
 
-import com.frank.api.model.NoteCategory;
+import com.frank.api.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface NoteCategoryRepository extends JpaRepository<NoteCategory, Long> {
+public interface ProductRepository extends JpaRepository<Product, Long> {
 
 }

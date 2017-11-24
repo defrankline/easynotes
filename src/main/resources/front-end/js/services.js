@@ -4,8 +4,6 @@ var API_URL = "http://127.0.0.1:9000";
 
 services.factory('BrandService', ['$resource', function ($resource) {
     return $resource(API_URL+'/api/brands/:id', {}, {
-        fetchAll: {method: 'GET', url: API_URL+'/api/brands'},
-        paginated: {method: 'GET', url: API_URL+'/api/brands/paginated'},
         update: {method: 'PUT', params: {id: '@id'}},
     });
 }]);

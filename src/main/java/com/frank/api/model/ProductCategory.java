@@ -11,17 +11,16 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "note_categories")
+@Table(name = "product_categories")
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(value = {"createdAt", "updatedAt"}, allowGetters = true)
-public class NoteCategory implements Serializable {
+public class ProductCategory implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @NotBlank
-    private String title;
-
+    private String name;
 
     @Column(nullable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
@@ -41,12 +40,12 @@ public class NoteCategory implements Serializable {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Date getCreatedAt() {
