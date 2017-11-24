@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="859ea0fd-e52b-4f17-98d4-68af247d225d" name="Default" comment="" />
+    <list default="true" id="859ea0fd-e52b-4f17-98d4-68af247d225d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frank/api/controller/ProductController.java" afterPath="$PROJECT_DIR$/src/main/java/com/frank/api/controller/ProductController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/frank/api/model/Product.java" afterPath="$PROJECT_DIR$/src/main/java/com/frank/api/model/Product.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/front-end/templates/products.html" afterPath="$PROJECT_DIR$/src/main/resources/front-end/templates/products.html" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,50 +20,48 @@
       <file leaf-file-name="Product.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/frank/api/model/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="101" column="1" lean-forward="true" selection-start-line="101" selection-start-column="1" selection-end-line="101" selection-end-column="1" />
+            <state relative-caret-position="193">
+              <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding>
-                <element signature="e#1404#1405#0" expanded="true" />
-                <element signature="e#1429#1430#0" expanded="true" />
-                <element signature="e#1463#1464#0" expanded="true" />
-                <element signature="e#1491#1492#0" expanded="true" />
-                <element signature="e#1522#1523#0" expanded="true" />
-                <element signature="e#1549#1550#0" expanded="true" />
-                <element signature="e#1589#1590#0" expanded="true" />
-                <element signature="e#1621#1622#0" expanded="true" />
-                <element signature="e#1654#1655#0" expanded="true" />
-                <element signature="e#1682#1683#0" expanded="true" />
-                <element signature="e#1725#1726#0" expanded="true" />
-                <element signature="e#1759#1760#0" expanded="true" />
-                <element signature="e#1804#1805#0" expanded="true" />
-                <element signature="e#1844#1845#0" expanded="true" />
-                <element signature="e#1911#1912#0" expanded="true" />
-                <element signature="e#1969#1970#0" expanded="true" />
-                <marker date="1511538416343" expanded="false" signature="2003:2014" ph=" { " />
-                <marker date="1511538416343" expanded="false" signature="2029:2035" ph=" }" />
-                <marker date="1511538416343" expanded="false" signature="2080:2091" ph=" { " />
-                <marker date="1511538416343" expanded="false" signature="2114:2120" ph=" }" />
-                <marker date="1511538416343" expanded="false" signature="2152:2163" ph=" { " />
-                <marker date="1511538416343" expanded="false" signature="2180:2186" ph=" }" />
-                <marker date="1511538416343" expanded="false" signature="2232:2243" ph=" { " />
-                <marker date="1511538416343" expanded="false" signature="2270:2276" ph=" }" />
-                <marker date="1511538416343" expanded="false" signature="2308:2319" ph=" { " />
-                <marker date="1511538416343" expanded="false" signature="2336:2342" ph=" }" />
-                <marker date="1511538416343" expanded="false" signature="2388:2399" ph=" { " />
-                <marker date="1511538416343" expanded="false" signature="2426:2432" ph=" }" />
+                <element signature="e#1825#1826#0" expanded="true" />
+                <element signature="e#1850#1851#0" expanded="true" />
+                <element signature="e#1884#1885#0" expanded="true" />
+                <element signature="e#1912#1913#0" expanded="true" />
+                <element signature="e#1943#1944#0" expanded="true" />
+                <element signature="e#1970#1971#0" expanded="true" />
+                <element signature="e#2010#2011#0" expanded="true" />
+                <element signature="e#2042#2043#0" expanded="true" />
+                <element signature="e#2075#2076#0" expanded="true" />
+                <element signature="e#2103#2104#0" expanded="true" />
+                <element signature="e#2146#2147#0" expanded="true" />
+                <element signature="e#2180#2181#0" expanded="true" />
+                <element signature="e#2220#2221#0" expanded="true" />
+                <element signature="e#2254#2255#0" expanded="true" />
+                <element signature="e#2284#2285#0" expanded="true" />
+                <element signature="e#2317#2318#0" expanded="true" />
+                <element signature="e#2387#2388#0" expanded="true" />
+                <element signature="e#2441#2442#0" expanded="true" />
+                <element signature="e#2491#2492#0" expanded="true" />
+                <element signature="e#2534#2535#0" expanded="true" />
+                <marker date="1511540336552" expanded="false" signature="2567:2578" ph=" { " />
+                <marker date="1511540336552" expanded="false" signature="2595:2601" ph=" }" />
+                <marker date="1511540336552" expanded="false" signature="2647:2658" ph=" { " />
+                <marker date="1511540336552" expanded="false" signature="2685:2691" ph=" }" />
+                <marker date="1511540336552" expanded="false" signature="2723:2734" ph=" { " />
+                <marker date="1511540336552" expanded="false" signature="2751:2757" ph=" }" />
+                <marker date="1511540336552" expanded="false" signature="2803:2814" ph=" { " />
+                <marker date="1511540336552" expanded="false" signature="2841:2847" ph=" }" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/frank/api/controller/ProductController.java">
+      <file leaf-file-name="products.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/front-end/templates/products.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-              <folding>
-                <marker date="1511538416343" expanded="true" signature="2111:2364" ph="{...}" />
-              </folding>
+            <state relative-caret-position="13">
+              <caret line="117" column="48" lean-forward="true" selection-start-line="117" selection-start-column="48" selection-end-line="117" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -137,7 +139,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/frank/api/model/ProductCategory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frank/api/repository/ProductCategoryRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frank/api/repository/ProductRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frank/api/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/frank/api/model/Brand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frank/api/controller/BrandController.java" />
@@ -146,8 +147,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/front-end/js/controllers/brand-ctrl.js" />
         <option value="$PROJECT_DIR$/src/main/resources/front-end/js/services.js" />
         <option value="$PROJECT_DIR$/src/main/resources/front-end/js/controllers/product-ctrl.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/front-end/templates/products.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/frank/api/model/Product.java" />
         <option value="$PROJECT_DIR$/src/main/resources/front-end/templates/auth.html" />
         <option value="$PROJECT_DIR$/src/main/resources/front-end/js/loginApp.js" />
         <option value="$PROJECT_DIR$/src/main/resources/front-end/auth.html" />
@@ -163,6 +162,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/frank/api/controller/BookController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frank/api/controller/BookCategoryController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/frank/api/controller/ProductCategoryController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/frank/api/model/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/frank/api/controller/ProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/front-end/templates/products.html" />
       </list>
     </option>
   </component>
@@ -263,22 +265,24 @@
               <item name="easynotes" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="frank" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="easynotes" type="b2602c69:ProjectViewProjectNode" />
               <item name="easynotes" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="frank" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="front-end" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easynotes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easynotes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="front-end" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -436,7 +440,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38624000" />
+    <option name="totallyTimeSpent" value="40623000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -451,7 +455,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946378" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32879582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4450262" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -721,60 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frank/api/model/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="101" column="1" lean-forward="true" selection-start-line="101" selection-start-column="1" selection-end-line="101" selection-end-column="1" />
-          <folding>
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1429#1430#0" expanded="true" />
-            <element signature="e#1463#1464#0" expanded="true" />
-            <element signature="e#1491#1492#0" expanded="true" />
-            <element signature="e#1522#1523#0" expanded="true" />
-            <element signature="e#1549#1550#0" expanded="true" />
-            <element signature="e#1589#1590#0" expanded="true" />
-            <element signature="e#1621#1622#0" expanded="true" />
-            <element signature="e#1654#1655#0" expanded="true" />
-            <element signature="e#1682#1683#0" expanded="true" />
-            <element signature="e#1725#1726#0" expanded="true" />
-            <element signature="e#1759#1760#0" expanded="true" />
-            <element signature="e#1804#1805#0" expanded="true" />
-            <element signature="e#1844#1845#0" expanded="true" />
-            <element signature="e#1911#1912#0" expanded="true" />
-            <element signature="e#1969#1970#0" expanded="true" />
-            <marker date="1511538416343" expanded="false" signature="2003:2014" ph=" { " />
-            <marker date="1511538416343" expanded="false" signature="2029:2035" ph=" }" />
-            <marker date="1511538416343" expanded="false" signature="2080:2091" ph=" { " />
-            <marker date="1511538416343" expanded="false" signature="2114:2120" ph=" }" />
-            <marker date="1511538416343" expanded="false" signature="2152:2163" ph=" { " />
-            <marker date="1511538416343" expanded="false" signature="2180:2186" ph=" }" />
-            <marker date="1511538416343" expanded="false" signature="2232:2243" ph=" { " />
-            <marker date="1511538416343" expanded="false" signature="2270:2276" ph=" }" />
-            <marker date="1511538416343" expanded="false" signature="2308:2319" ph=" { " />
-            <marker date="1511538416343" expanded="false" signature="2336:2342" ph=" }" />
-            <marker date="1511538416343" expanded="false" signature="2388:2399" ph=" { " />
-            <marker date="1511538416343" expanded="false" signature="2426:2432" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/frank/api/controller/ProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <marker date="1511538416343" expanded="true" signature="2111:2364" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/front-end/templates/products.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="125" column="60" lean-forward="false" selection-start-line="125" selection-start-column="60" selection-end-line="125" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/front-end/js/loginApp.js" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/front-end/auth.html" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/front-end/js/services.js">
@@ -857,6 +807,59 @@
         <state relative-caret-position="-271">
           <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/front-end/templates/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="117" column="48" lean-forward="true" selection-start-line="117" selection-start-column="48" selection-end-line="117" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frank/api/controller/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="52" column="48" lean-forward="true" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/frank/api/model/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="93" column="0" lean-forward="true" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding>
+            <element signature="e#1825#1826#0" expanded="true" />
+            <element signature="e#1850#1851#0" expanded="true" />
+            <element signature="e#1884#1885#0" expanded="true" />
+            <element signature="e#1912#1913#0" expanded="true" />
+            <element signature="e#1943#1944#0" expanded="true" />
+            <element signature="e#1970#1971#0" expanded="true" />
+            <element signature="e#2010#2011#0" expanded="true" />
+            <element signature="e#2042#2043#0" expanded="true" />
+            <element signature="e#2075#2076#0" expanded="true" />
+            <element signature="e#2103#2104#0" expanded="true" />
+            <element signature="e#2146#2147#0" expanded="true" />
+            <element signature="e#2180#2181#0" expanded="true" />
+            <element signature="e#2220#2221#0" expanded="true" />
+            <element signature="e#2254#2255#0" expanded="true" />
+            <element signature="e#2284#2285#0" expanded="true" />
+            <element signature="e#2317#2318#0" expanded="true" />
+            <element signature="e#2387#2388#0" expanded="true" />
+            <element signature="e#2441#2442#0" expanded="true" />
+            <element signature="e#2491#2492#0" expanded="true" />
+            <element signature="e#2534#2535#0" expanded="true" />
+            <marker date="1511540336552" expanded="false" signature="2567:2578" ph=" { " />
+            <marker date="1511540336552" expanded="false" signature="2595:2601" ph=" }" />
+            <marker date="1511540336552" expanded="false" signature="2647:2658" ph=" { " />
+            <marker date="1511540336552" expanded="false" signature="2685:2691" ph=" }" />
+            <marker date="1511540336552" expanded="false" signature="2723:2734" ph=" { " />
+            <marker date="1511540336552" expanded="false" signature="2751:2757" ph=" }" />
+            <marker date="1511540336552" expanded="false" signature="2803:2814" ph=" { " />
+            <marker date="1511540336552" expanded="false" signature="2841:2847" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>

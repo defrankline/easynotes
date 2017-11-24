@@ -49,8 +49,8 @@ public class ProductController {
 
         product.setName(productDetails.getName());
         product.setPrice(productDetails.getPrice());
-        product.setProductCategoryId(productDetails.getProductCategoryId());
-        product.setBrandId(productDetails.getBrandId());
+        product.setProductCategory(productDetails.getProductCategory());
+        product.setBrand(productDetails.getBrand());
 
         Product updatedProduct = productRepository.save(product);
         return ResponseEntity.ok(updatedProduct);

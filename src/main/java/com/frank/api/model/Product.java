@@ -28,11 +28,13 @@ public class Product implements Serializable {
     @Column(name = "price", nullable = false)
     private Integer price;
 
-    @Column(name = "product_category_id", nullable = false)
-    private Integer productCategoryId;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "product_category_id")
+    private ProductCategory productCategory;
 
-    @Column(name = "brand_id", nullable = false)
-    private Integer brandId;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "brand_id")
+    private Brand brand;
 
     @Column(nullable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
@@ -43,6 +45,20 @@ public class Product implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     @LastModifiedDate
     private Date updatedAt;
+
+    public Product(){
+
+    }
+
+
+    public Product(String name, Integer price, ProductCategory productCategory, Brand brand, Date createdAt, Date updatedAt) {
+        this.name = name;
+        this.price = price;
+        this.productCategory = productCategory;
+        this.brand = brand;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
 
     public Long getId() {
         return id;
@@ -68,20 +84,20 @@ public class Product implements Serializable {
         this.price = price;
     }
 
-    public Integer getProductCategoryId() {
-        return productCategoryId;
+    public void setBrand(Brand brand){
+        this.brand = brand;
     }
 
-    public void setProductCategoryId(Integer productCategoryId) {
-        this.productCategoryId = productCategoryId;
+    public Brand getBrand(){
+        return this.brand;
     }
 
-    public Integer getBrandId() {
-        return brandId;
+    public void setProductCategory(ProductCategory productCategory){
+        this.productCategory = productCategory;
     }
 
-    public void setBrandId(Integer brandId) {
-        this.brandId = brandId;
+    public ProductCategory getProductCategory(){
+        return this.productCategory;
     }
 
     public Date getCreatedAt() {
