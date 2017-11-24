@@ -1,12 +1,12 @@
-function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDialogService) {
-    $scope.title = "Brands";
+function ProductCtrl($scope, DataModel, ProductService,ProductCategoryService,BrandService, $timeout, $state, ConfirmDialogService) {
+    $scope.title = "Product";
     $scope.items = DataModel;
 
     $scope.alertSuccess = function () {
         $scope.showAlertSuccess = true;
         $timeout(function () {
             $scope.showAlertSuccess = false;
-        }, 7000);
+        }, 6000);
         $state.reload();
     };
 
@@ -14,7 +14,7 @@ function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDia
         $scope.showAlertError = true;
         $timeout(function () {
             $scope.showAlertError = false;
-        }, 7000);
+        }, 6000);
         $state.reload();
     };
 
@@ -27,10 +27,19 @@ function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDia
         $scope.showCreateForm = true;
         $scope.showList = false;
         $scope.showAddButton = false;
+
         $scope.formDataModel = {};
 
+        ProductCategoryService.query(function (data) {
+            $scope.productCategories = data;
+        });
+
+        BrandService.query(function (data) {
+            $scope.brands = data;
+        });
+
         $scope.store = function () {
-            BrandService.save($scope.formDataModel,
+            ProductService.save($scope.formDataModel,
                 function (data) {
                     $scope.successMessage = "Item Added Successfully";
                     $scope.showCreateForm = false;
@@ -52,10 +61,19 @@ function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDia
         $scope.showEditForm = true;
         $scope.showList = false;
         $scope.showAddButton = false;
-        $scope.formDataModel = angular.copy(formDataModel);
+
+        ProductCategoryService.query(function (data) {
+            $scope.productCategories = data;
+            $scope.formDataModel = angular.copy(formDataModel);
+        });
+
+        BrandService.query(function (data) {
+            $scope.brands = data;
+        });
+
 
         $scope.update = function () {
-            BrandService.update($scope.formDataModel,
+            ProductService.update($scope.formDataModel,
                 function (data) {
                     $scope.successMessage = "Item updated successfully!";
                     $scope.alertSuccess();
@@ -71,7 +89,7 @@ function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDia
 
     $scope.delete = function (item) {
         ConfirmDialogService.showConfirmDialog('Confirm Delete!', 'Are sure you want to delete ' + item.title).then(function () {
-                BrandService.delete({id: item.id}, function (data) {
+                ProductService.delete({id: item.id}, function (data) {
                         $scope.successMessage = "Item Deleted Successfully";
                         $scope.alertSuccess();
 
@@ -96,11 +114,11 @@ function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDia
     };
 };
 
-BrandCtrl.resolve = {
-    DataModel: function (BrandService, $timeout, $q) {
+ProductCtrl.resolve = {
+    DataModel: function (ProductService, $timeout, $q) {
         var deferred = $q.defer();
         $timeout(function () {
-            BrandService.query(function (data) {
+            ProductService.query(function (data) {
                 deferred.resolve(data);
             });
         }, 900);

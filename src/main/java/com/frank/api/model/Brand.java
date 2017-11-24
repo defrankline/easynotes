@@ -21,7 +21,7 @@ public class Brand implements Serializable {
     private Long id;
 
     @NotBlank
-    private String title;
+    private String name;
 
     @Column(nullable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
@@ -41,12 +41,12 @@ public class Brand implements Serializable {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Date getCreatedAt() {

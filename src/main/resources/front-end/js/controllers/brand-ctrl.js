@@ -6,7 +6,7 @@ function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDia
         $scope.showAlertSuccess = true;
         $timeout(function () {
             $scope.showAlertSuccess = false;
-        }, 5000);
+        }, 7000);
         $state.reload();
     };
 
@@ -14,7 +14,7 @@ function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDia
         $scope.showAlertError = true;
         $timeout(function () {
             $scope.showAlertError = false;
-        }, 5000);
+        }, 7000);
         $state.reload();
     };
 

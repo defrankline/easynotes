@@ -27,6 +27,24 @@ myApp.config(function($stateProvider,$urlRouterProvider) {
         resolve: BrandCtrl.resolve,
     };
 
+    var productCategoryState = {
+        name: 'product-categories',
+        url: '/product-categories',
+        templateUrl: '/templates/product-categories.html',
+        controller: ProductCategoryCtrl,
+        resolve: ProductCategoryCtrl.resolve,
+    };
+
+    var productState = {
+        name: 'products',
+        url: '/products',
+        templateUrl: '/templates/products.html',
+        controller: ProductCtrl,
+        resolve: ProductCtrl.resolve,
+    };
+
+    $stateProvider.state(productState);
+    $stateProvider.state(productCategoryState);
     $stateProvider.state(brandState);
     $stateProvider.state(homeState);
     $stateProvider.state(aboutState);

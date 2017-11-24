@@ -1,12 +1,12 @@
-function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDialogService) {
-    $scope.title = "Brands";
+function ProductCategoryCtrl($scope, DataModel, ProductCategoryService, $timeout, $state, ConfirmDialogService) {
+    $scope.title = "Product Categories";
     $scope.items = DataModel;
 
     $scope.alertSuccess = function () {
         $scope.showAlertSuccess = true;
         $timeout(function () {
             $scope.showAlertSuccess = false;
-        }, 7000);
+        }, 6000);
         $state.reload();
     };
 
@@ -14,7 +14,7 @@ function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDia
         $scope.showAlertError = true;
         $timeout(function () {
             $scope.showAlertError = false;
-        }, 7000);
+        }, 6000);
         $state.reload();
     };
 
@@ -30,7 +30,7 @@ function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDia
         $scope.formDataModel = {};
 
         $scope.store = function () {
-            BrandService.save($scope.formDataModel,
+            ProductCategoryService.save($scope.formDataModel,
                 function (data) {
                     $scope.successMessage = "Item Added Successfully";
                     $scope.showCreateForm = false;
@@ -55,7 +55,7 @@ function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDia
         $scope.formDataModel = angular.copy(formDataModel);
 
         $scope.update = function () {
-            BrandService.update($scope.formDataModel,
+            ProductCategoryService.update($scope.formDataModel,
                 function (data) {
                     $scope.successMessage = "Item updated successfully!";
                     $scope.alertSuccess();
@@ -71,7 +71,7 @@ function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDia
 
     $scope.delete = function (item) {
         ConfirmDialogService.showConfirmDialog('Confirm Delete!', 'Are sure you want to delete ' + item.title).then(function () {
-                BrandService.delete({id: item.id}, function (data) {
+                ProductCategoryService.delete({id: item.id}, function (data) {
                         $scope.successMessage = "Item Deleted Successfully";
                         $scope.alertSuccess();
 
@@ -96,11 +96,11 @@ function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDia
     };
 };
 
-BrandCtrl.resolve = {
-    DataModel: function (BrandService, $timeout, $q) {
+ProductCategoryCtrl.resolve = {
+    DataModel: function (ProductCategoryService, $timeout, $q) {
         var deferred = $q.defer();
         $timeout(function () {
-            BrandService.query(function (data) {
+            ProductCategoryService.query(function (data) {
                 deferred.resolve(data);
             });
         }, 900);

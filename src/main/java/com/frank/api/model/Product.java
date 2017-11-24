@@ -7,6 +7,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -17,22 +18,21 @@ import java.util.Date;
         allowGetters = true)
 public class Product implements Serializable {
     @Id
+    @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotBlank
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @NotBlank
-    private Double price;
+    @Column(name = "price", nullable = false)
+    private Integer price;
 
-    @NotBlank
-    @Column(name = "product_category_id")
-    private Long productCategoryId;
+    @Column(name = "product_category_id", nullable = false)
+    private Integer productCategoryId;
 
-    @NotBlank
-    @Column(name = "brand_id")
-    private Long brandId;
+    @Column(name = "brand_id", nullable = false)
+    private Integer brandId;
 
     @Column(nullable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
@@ -60,27 +60,27 @@ public class Product implements Serializable {
         this.name = name;
     }
 
-    public Double getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
-    public Long getProductCategoryId() {
+    public Integer getProductCategoryId() {
         return productCategoryId;
     }
 
-    public void setProductCategoryId(Long productCategoryId) {
+    public void setProductCategoryId(Integer productCategoryId) {
         this.productCategoryId = productCategoryId;
     }
 
-    public Long getBrandId() {
+    public Integer getBrandId() {
         return brandId;
     }
 
-    public void setBrandId(Long brandId) {
+    public void setBrandId(Integer brandId) {
         this.brandId = brandId;
     }
 

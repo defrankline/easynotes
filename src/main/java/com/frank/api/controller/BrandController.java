@@ -46,7 +46,7 @@ public class BrandController {
         if(brand == null) {
             return ResponseEntity.notFound().build();
         }
-        brand.setTitle(brandDetails.getTitle());
+        brand.setName(brandDetails.getName());
         Brand updatedBrand = brandRepository.save(brand);
         return ResponseEntity.ok(updatedBrand);
     }
