@@ -24,3 +24,5 @@ hs_err_pid*
 .idea
 .mvn
 /target
+/src/main/resources/templates/bower_components/
+/src/main/resources/templates/node_modules/
