@@ -142,7 +142,7 @@
         </div>
     </div>
     <br />
-    <div class="row">
+    <div class="row" ng-show="showList===true">
         <div class="col-md-8" ng-show="items.totalElements > items.size">
             <ul uib-pagination total-items="items.totalElements" max-size="maxSize" class="pagination-sm pull-left" boundary-links="true"
                 num-pages="numPages" items-per-page="items.size"
@@ -150,7 +150,7 @@
                 ng-change="pageChanged()">
             </ul>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2" ng-show="items.totalElements > items.size">
             <total-pages currentPage="{{currentPage + 1}}" totalItems="{{ items.totalElements }}"
                          perPage="{{ items.size }}"></total-pages>
         </div>

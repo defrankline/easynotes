@@ -1,5 +1,5 @@
 function ProductCtrl($scope, DataModel, ProductService, ProductCategoryService, BrandService, $timeout, $state, ConfirmDialogService) {
-    $scope.title = "Product";
+    $scope.title = "Products";
     $scope.items = DataModel;
 
     $scope.alertSuccess = function () {
@@ -123,18 +123,6 @@ function ProductCtrl($scope, DataModel, ProductService, ProductCategoryService, 
         /*$state.reload();*/
     };
 };
-
-/*ProductCtrl.resolve = {
-    DataModel: function (ProductService, $timeout, $q) {
-        var deferred = $q.defer();
-        $timeout(function () {
-            ProductService.query(function (data) {
-                deferred.resolve(data);
-            });
-        }, 900);
-        return deferred.promise;
-    }
-};*/
 
 ProductCtrl.resolve = {
     DataModel: function (ProductService, $timeout, $q) {

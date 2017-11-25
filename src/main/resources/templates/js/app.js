@@ -103,7 +103,7 @@ myApp.directive("perPage", function () {
             scope.perPageNumberChange = function (perPageNumber) {
                 ctrl.$setViewValue(perPageNumber);
             };
-            scope.perPageOptions = [10,25, 50, 100, 250, 500, 1000];
+            scope.perPageOptions = [5,10,25, 50, 100, 250, 500, 1000];
             scope.perPageNumber = scope.perPageOptions[0];
         }
     };

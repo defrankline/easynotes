@@ -10,12 +10,14 @@ services.factory('PingService', function ($resource) {
 services.factory('BrandService', ['$resource', function ($resource) {
     return $resource(API_URL+'/api/brands/:id', {}, {
         update: {method: 'PUT', params: {id: '@id'}},
+        paginated: {method: 'GET',params: {page: '@page',perPage:'@perPage'}, url: API_URL+'/api/brands/paginated'},
     });
 }]);
 
 services.factory('ProductCategoryService', ['$resource', function ($resource) {
     return $resource(API_URL+'/api/product-categories/:id', {}, {
         update: {method: 'PUT', params: {id: '@id'}},
+        paginated: {method: 'GET',params: {page: '@page',perPage:'@perPage'}, url: API_URL+'/api/product-categories/paginated'},
     });
 }]);
 

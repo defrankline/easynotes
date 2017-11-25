@@ -1,4 +1,4 @@
-function ProductCategoryCtrl($scope, DataModel, ProductCategoryService, $timeout, $state, ConfirmDialogService) {
+function ProductCategoryCtrl($scope, DataModel,ProductCategoryService, $timeout, $state, ConfirmDialogService) {
     $scope.title = "Product Categories";
     $scope.items = DataModel;
 
@@ -23,10 +23,21 @@ function ProductCategoryCtrl($scope, DataModel, ProductCategoryService, $timeout
     $scope.showList = true;
     $scope.showAddButton = true;
 
+    $scope.currentPage = 0;
+    $scope.maxSize = 3;
+
+    $scope.pageChanged = function () {
+        var pageNumber = $scope.currentPage > 0 ? $scope.currentPage - 1 : 0;
+        ProductCategoryService.paginated({page: pageNumber, perPage: $scope.perPage}, function (data) {
+            $scope.items = data;
+        });
+    };
+
     $scope.create = function () {
         $scope.showCreateForm = true;
         $scope.showList = false;
         $scope.showAddButton = false;
+
         $scope.formDataModel = {};
 
         $scope.store = function () {
@@ -100,7 +111,7 @@ ProductCategoryCtrl.resolve = {
     DataModel: function (ProductCategoryService, $timeout, $q) {
         var deferred = $q.defer();
         $timeout(function () {
-            ProductCategoryService.query(function (data) {
+            ProductCategoryService.paginated({page: 0, perPage: 5}, function (data) {
                 deferred.resolve(data);
             });
         }, 900);

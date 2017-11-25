@@ -1,4 +1,4 @@
-function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDialogService) {
+function BrandCtrl($scope, DataModel,BrandService, $timeout, $state, ConfirmDialogService) {
     $scope.title = "Brands";
     $scope.items = DataModel;
 
@@ -6,7 +6,7 @@ function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDia
         $scope.showAlertSuccess = true;
         $timeout(function () {
             $scope.showAlertSuccess = false;
-        }, 7000);
+        }, 6000);
         $state.reload();
     };
 
@@ -14,7 +14,7 @@ function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDia
         $scope.showAlertError = true;
         $timeout(function () {
             $scope.showAlertError = false;
-        }, 7000);
+        }, 6000);
         $state.reload();
     };
 
@@ -23,10 +23,21 @@ function BrandCtrl($scope, DataModel, BrandService, $timeout, $state, ConfirmDia
     $scope.showList = true;
     $scope.showAddButton = true;
 
+    $scope.currentPage = 0;
+    $scope.maxSize = 3;
+
+    $scope.pageChanged = function () {
+        var pageNumber = $scope.currentPage > 0 ? $scope.currentPage - 1 : 0;
+        BrandService.paginated({page: pageNumber, perPage: $scope.perPage}, function (data) {
+            $scope.items = data;
+        });
+    };
+
     $scope.create = function () {
         $scope.showCreateForm = true;
         $scope.showList = false;
         $scope.showAddButton = false;
+
         $scope.formDataModel = {};
 
         $scope.store = function () {
@@ -100,7 +111,7 @@ BrandCtrl.resolve = {
     DataModel: function (BrandService, $timeout, $q) {
         var deferred = $q.defer();
         $timeout(function () {
-            BrandService.query(function (data) {
+            BrandService.paginated({page: 0, perPage: 5}, function (data) {
                 deferred.resolve(data);
             });
         }, 900);
