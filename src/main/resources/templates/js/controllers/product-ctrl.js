@@ -1,4 +1,4 @@
-function ProductCtrl($scope, DataModel, ProductService,ProductCategoryService,BrandService, $timeout, $state, ConfirmDialogService) {
+function ProductCtrl($scope, DataModel, ProductService, ProductCategoryService, BrandService, $timeout, $state, ConfirmDialogService) {
     $scope.title = "Product";
     $scope.items = DataModel;
 
@@ -22,6 +22,16 @@ function ProductCtrl($scope, DataModel, ProductService,ProductCategoryService,Br
     $scope.showEditForm = false;
     $scope.showList = true;
     $scope.showAddButton = true;
+
+    $scope.currentPage = 0;
+    $scope.maxSize = 3;
+
+    $scope.pageChanged = function () {
+        var pageNumber = $scope.currentPage > 0 ? $scope.currentPage - 1 : 0;
+        ProductService.paginated({page: pageNumber, perPage: $scope.perPage}, function (data) {
+            $scope.items = data;
+        });
+    };
 
     $scope.create = function () {
         $scope.showCreateForm = true;
@@ -114,11 +124,23 @@ function ProductCtrl($scope, DataModel, ProductService,ProductCategoryService,Br
     };
 };
 
-ProductCtrl.resolve = {
+/*ProductCtrl.resolve = {
     DataModel: function (ProductService, $timeout, $q) {
         var deferred = $q.defer();
         $timeout(function () {
             ProductService.query(function (data) {
+                deferred.resolve(data);
+            });
+        }, 900);
+        return deferred.promise;
+    }
+};*/
+
+ProductCtrl.resolve = {
+    DataModel: function (ProductService, $timeout, $q) {
+        var deferred = $q.defer();
+        $timeout(function () {
+            ProductService.paginated({page: 0, perPage: 5}, function (data) {
                 deferred.resolve(data);
             });
         }, 900);

@@ -26,7 +26,7 @@ public class ProductController {
 
     //Get all products - paginated
     @GetMapping("/products/paginated")
-    public Page<Product> getPaginatedProducts(@RequestParam Integer page,@RequestParam Integer perPage) {
+    public Page<Product> getPaginatedProducts(@RequestParam("page") Integer page,@RequestParam("perPage") Integer perPage) {
         return productService.getPaginatedProduct(page,perPage);
     }
 

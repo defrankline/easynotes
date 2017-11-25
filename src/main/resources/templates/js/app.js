@@ -119,7 +119,6 @@ myApp.directive("totalPages", function () {
             };
             scope.currentPage = attrs.currentpage;
             scope.totalItems = attrs.totalitems;
-            console.log(attrs.totalitems);
             scope.perPage = attrs.perpage;
         }
     };
