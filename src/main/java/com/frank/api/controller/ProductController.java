@@ -1,7 +1,6 @@
 package com.frank.api.controller;
 
 import com.frank.api.model.Product;
-import com.frank.api.repository.ProductRepository;
 import com.frank.api.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -17,15 +16,12 @@ import java.util.List;
 public class ProductController {
 
     @Autowired
-    ProductRepository productRepository;
-
-    @Autowired
     private ProductService productService;
 
     // Get All Products
     @GetMapping("/products")
     public List<Product> getAllProducts() {
-        return productRepository.findAll();
+        return productService.getAllProducts();
     }
 
     //Get all products - paginated
@@ -37,13 +33,13 @@ public class ProductController {
     // Create a new Product
     @PostMapping("/products")
     public Product createProduct(@Valid @RequestBody Product product) {
-        return productRepository.save(product);
+        return productService.createProduct(product);
     }
 
     // Get a Single Product
     @GetMapping("/products/{id}")
     public ResponseEntity<Product> getProductById(@PathVariable(value = "id") Long productId) {
-        Product product = productRepository.findOne(productId);
+        Product product = productService.getProductById(productId);
         if (product == null) {
             return ResponseEntity.notFound().build();
         }
@@ -53,7 +49,7 @@ public class ProductController {
     // Update a Product
     @PutMapping("/products/{id}")
     public ResponseEntity<Product> updateProduct(@PathVariable(value = "id") Long productId, @Valid @RequestBody Product productDetails) {
-        Product product = productRepository.findOne(productId);
+        Product product = productService.getProductById(productId);
         if (product == null) {
             return ResponseEntity.notFound().build();
         }
@@ -63,19 +59,19 @@ public class ProductController {
         product.setProductCategory(productDetails.getProductCategory());
         product.setBrand(productDetails.getBrand());
 
-        Product updatedProduct = productRepository.save(product);
+        Product updatedProduct = productService.updateProduct(product);
         return ResponseEntity.ok(updatedProduct);
     }
 
     // Delete a Product
     @DeleteMapping("/products/{id}")
     public ResponseEntity<Product> deleteProduct(@PathVariable(value = "id") Long productId) {
-        Product product = productRepository.findOne(productId);
+        Product product = productService.getProductById(productId);
         if (product == null) {
             return ResponseEntity.notFound().build();
         }
 
-        productRepository.delete(product);
+        productService.deleteProduct(product);
         return ResponseEntity.ok().build();
     }
 

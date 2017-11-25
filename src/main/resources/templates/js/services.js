@@ -22,5 +22,6 @@ services.factory('ProductCategoryService', ['$resource', function ($resource) {
 services.factory('ProductService', ['$resource', function ($resource) {
     return $resource(API_URL+'/api/products/:id', {}, {
         update: {method: 'PUT', params: {id: '@id'}},
+        paginated: {method: 'GET', url: API_URL+'/api/products/paginated'},
     });
 }]);
