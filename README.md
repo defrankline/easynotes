@@ -12,6 +12,8 @@ REST API: Spring Boot, Spring Data REST, Spring Data JPA, MySQL
 Front End: Html + Angularjs
 
 ## Installation
+######Database
+create mysql database and say name it easynotes. On running the rest api tables will be created automatically.
 
 ###### Front End components
 cd to cd src/main/resources/templates and run the following commands:
