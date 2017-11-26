@@ -5,20 +5,6 @@ myApp.config(function($stateProvider,$urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/home');
 
-    var loginState = {
-        name: 'login',
-        url: '/login',
-        templateUrl: '/templates/login.html',
-        controller: LoginCtrl,
-    };
-
-    var signinState = {
-        name: 'signin',
-        url: '/signin',
-        templateUrl: '/templates/login.html',
-        controller: LoginCtrl,
-    };
-
     var homeState = {
         name: 'home',
         url: '/home',
@@ -62,8 +48,6 @@ myApp.config(function($stateProvider,$urlRouterProvider) {
     $stateProvider.state(brandState);
     $stateProvider.state(homeState);
     $stateProvider.state(aboutState);
-    $stateProvider.state(loginState);
-    $stateProvider.state(signinState);
 
     $stateProvider.state("otherwise", {url: '/home'});
 });
@@ -103,7 +87,7 @@ myApp.directive("perPage", function () {
             scope.perPageNumberChange = function (perPageNumber) {
                 ctrl.$setViewValue(perPageNumber);
             };
-            scope.perPageOptions = [5,10,25, 50, 100, 250, 500, 1000];
+            scope.perPageOptions = [2,5,10,25, 50, 100, 250, 500, 1000];
             scope.perPageNumber = scope.perPageOptions[0];
         }
     };
